@@ -24,7 +24,7 @@ exports.signup = function(req, res, next) {
             if(err) { return next(err); }
 
             //response to request
-            res.json(user);
+            res.json({ success: true });
         });
     });
 }
