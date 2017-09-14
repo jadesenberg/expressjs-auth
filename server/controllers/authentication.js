@@ -14,12 +14,13 @@ exports.signup = function(req, res, next) {
             return res.status(422).send({ error: 'Email already exist' });
         }
 
-        //if user email not exist
+        //save value on user const
         const user = new User({
             email: email,
             password: password
         });
 
+        //save value on user
         user.save(function(err) {
             if(err) { return next(err); }
 
